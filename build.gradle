@@ -2,15 +2,11 @@ buildscript {
     ext {
         kotlinVersion = '1.2.51'
         springBootVersion = '2.0.5.RELEASE'
-        springBootWebVersion = '2.0.5.RELEASE'
     }
     repositories {
         mavenCentral()
     }
     dependencies {
-        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
-//        classpath("org.springframework.boot:spring-boot-starter-web:${springBootWebVersion}")
-        // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${kotlinVersion}")
         classpath("org.jetbrains.kotlin:kotlin-allopen:${kotlinVersion}")
@@ -49,7 +45,7 @@ ext {
 }
 
 dependencies {
-    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.0.5.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-web")
     compile('org.springframework.cloud:spring-cloud-starter-consul-discovery')
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     compile("org.jetbrains.kotlin:kotlin-reflect")
