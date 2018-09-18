@@ -17,7 +17,7 @@ class DcController {
     @Autowired
     var discoveryClient: DiscoveryClient? = null
 
-    @GetMapping("/dc")
+    @GetMapping("")
     fun dc(): String {
         val services = "Services: " + discoveryClient!!.services
         println(services)
