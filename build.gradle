@@ -45,6 +45,7 @@ ext {
 }
 
 dependencies {
+    compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-web")
     compile('org.springframework.cloud:spring-cloud-starter-consul-discovery')
     compile("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
